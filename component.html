@@ -1,0 +1,37 @@
+<div class="hero">
+    <p class="name">Name: {{$ctrl.hero.name}}</p>
+    <p class="lvl">Level: {{$ctrl.hero.level}}</p>
+    <p class="health">Health: {{$ctrl.hero.health}}</p>
+    <p class="mana">Mana: {{$ctrl.hero.mana}}</p>
+    <p class="att">Attack: {{$ctrl.hero.attack}}</p>
+    <p class="spec">Special Attack: {{$ctrl.hero.special}}</p>
+    <p class="health"><i class="material-icons">
+        opacity
+        </i>: {{$ctrl.hero.hpot}}</p>
+    <p class="mana"><i class="material-icons">
+        opacity
+        </i>: {{$ctrl.hero.mpot}}</p>
+    Attack<button class="att" ng-click="$ctrl.attack()" class="attack"><i class="material-icons">
+        brightness_high
+        </i></button>
+    Special Attack<button class="spec" ng-click="$ctrl.specialAttack()"><i class="material-icons">
+        stars
+        </i></button>
+    Use Health Potion<button class="hpot" ng-click="$ctrl.useHPot()"><i class="material-icons">
+        opacity
+        </i></button>
+    Use Mana Potion<button class="mpot" ng-click="$ctrl.useMPot()"><i class="material-icons">
+        opacity
+        </i></button>
+</div>
+
+<div class="villain">
+    <p class="name">Name: {{$ctrl.villain.name}}</p>
+    <p class="health">Health: {{$ctrl.villain.health}}</p>
+    <p class="attack">Attack: {{$ctrl.villain.attack}}</p>
+    <img src="{{$ctrl.villain.img}}">
+</div>
+<div ng-show="$ctrl.vdead" class="winmessage">
+    <h2>You Win!</h2>
+    <a href="/" class="reload">Play Again?</a>
+</div>
